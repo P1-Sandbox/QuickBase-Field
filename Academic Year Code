@@ -1,0 +1,13 @@
+If(
+  Month([Report Date]) >= 8,
+  "Fall " & Year([Report Date]),
+  If(
+    Month([Report Date]) <= 5,
+    "Spring " & Year([Report Date]),
+    If(
+      Month([Report Date]) <= 7,
+      "Summer " & Year([Report Date]),
+      "Winter " & Year([Report Date])
+    )
+  )
+)
